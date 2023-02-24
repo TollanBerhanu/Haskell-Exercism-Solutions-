@@ -6,6 +6,5 @@ sumOfMultiples factors limit = sum $ nub $ concat $ map (multiples limit) filter
                             where filteredFactors = filter (>0) factors 
 
 
--- multiples :: (Ord a, Num a, Num [a], Enum a) => [a]
+multiples :: Integer -> Integer -> [Integer]
 multiples limit x = takeWhile (< limit) $ map (* x) [1..]
-
